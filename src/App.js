@@ -6,6 +6,7 @@ import Home from "./Components/Home"
 import RegisterPage from "./Components/RegisterPage";
 import FurtherDetails from "./Components/FurtherDetails";
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
+import EditParagraph from "./Components/EditParagraphPage";
 
 
 function App() {
@@ -57,6 +58,8 @@ function App() {
                         <Route path="/" exact component={RegisterPage}/>
                         <Route path="/home" exact component={Home} />
                         <Route path="/furtherDetails" exact component={FurtherDetails} />
+                        <Route path="/editParagraph" exact component={EditParagraph} />
+
 
                     </Switch>
                 </div>
