@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
 import {Link} from "react-router-dom";
+import TextField from "@material-ui/core/TextField";
 
 
 
@@ -12,7 +13,7 @@ console.log(data.data)
     const [newParagraph,setNewParagraph] = useState('')
 
     const handleParagraphChange= (event) =>{
-    event.preventDefault()
+    // event.preventDefault()
         setNewParagraph(event.target.value)
 
     }
@@ -30,7 +31,16 @@ console.log(data.data)
         <div>
 
             <form>
-                <textarea value={data.data} onChange={handleParagraphChange}/>
+                <TextField
+                    id="outlined-multiline-static"
+                    multiline
+                    defaultValue={data.data}
+                    rows="4"
+                    fullWidth={true}
+                    variant="outlined"
+                    onChange={handleParagraphChange}
+                />
+                {/*<textarea onChange={handleParagraphChange}/>*/}
                 <button onClick={saveParagraph}>Save</button>
             </form>
 
