@@ -78,7 +78,7 @@ function Home({match}) {
 
                     <div>
 
-                        <li onClick={(e) =>
+                        <li key={obj} onClick={(e) =>
                             handleLinkClick(
                                 e,
                                 obj
